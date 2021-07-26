@@ -17,7 +17,7 @@ export const iniciarPokemon = (dispatch) => {
         const datos = 
           {
             nombre: data.name,
-            imagen: data.sprites.other.dream_world.front_default,
+            imagen: data.sprites.other["official-artwork"].front_default,
             peso: data.weight,
             altura: data.height,
             habilidades: data.abilities,

@@ -7,61 +7,61 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
-import Paper from '@material-ui/core/Paper';
 
 class PokemonesDetalles extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { datosCargados: false, empleados: [] };
-      }
-  componentDidMount() {}
-
+    
   render() {
+    console.log('this.props.detalles.imagen: ', this.props.detalles);
+
     return (
-      <section>
-        <Grid container spacing={3}>
-          <Paper elevation={3}>
-            <Card className={this.props.detalles.nombre}>
-              <CardActionArea
-              >
-                <div
-                  style={{
-                    display: "flex",
-                    alignItem: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <CardMedia
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      maxWidth: "500px",
-                      maxHeight: "500px",
-                    }}
-                    height="600"
-                    component="img"
-                    image={this.props.detalles.imagen}
-                    title="Contemplative Reptile"
-                  />
-                </div>
-                <CardContent>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItem: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <Typography gutterBottom variant="h6" component="h6">
-                      {this.props.detalles.nombre}
-                    </Typography>
-                  </div>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Paper>
-        </Grid>
-      </section>
+        <Grid item xs={12}>
+        <Card style={{
+                  width: "420px",
+                  height: "650px",
+                }}>
+          <CardActionArea>
+            <div
+              style={{
+                display: "flex",
+                alignItem: "center",
+                justifyContent: "center",
+                
+                  
+              }}
+            >
+              <CardMedia
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  maxWidth: "350px",
+                  maxHeight: "350px",
+                }}
+                height="150"
+                component="img"
+                image={this.props.detalles.imagen}
+                title="Contemplative Reptile"
+              />
+            </div>
+            <CardContent>
+            <div
+              style={{
+                display: "flex",
+                alignItem: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Typography gutterBottom variant="h6" component="h6">
+                {this.props.detalles.nombre}
+              </Typography>
+              </div>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+      </Grid>
+
+
+        
+
     );
   }
 }

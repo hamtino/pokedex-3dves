@@ -13,6 +13,7 @@ function App() {
           <Pokemones />
         </Grid>
         <Grid item xs={4}>
+          <br></br>
           <PokemonesDetalles />
         </Grid>
       </Grid>
