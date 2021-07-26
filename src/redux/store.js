@@ -5,7 +5,19 @@ const estadoInicial = {
     historial: [],
     detalles: {
         nombre: 'seleccione pokemon',
-        imagen: 'https://i.pinimg.com/originals/43/e5/87/43e5879e3357ee51e080eda20d99bbde.png'
+        imagen: 'https://i.pinimg.com/originals/43/e5/87/43e5879e3357ee51e080eda20d99bbde.png',
+        experiencia: [{
+            base_stat: "none",
+            stat:{
+                name: "none"
+            }
+        },{
+            base_stat: "none",
+            stat:{
+                name: "none"
+            }
+        }]
+        
     }
 }
 //funcion reductora

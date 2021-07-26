@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { iniciarPokemon } from "../redux/tareas";
 import Tarjeta from "./TarjetaPokemon";
 import Grid from "@material-ui/core/Grid";
-import Container from '@material-ui/core/Container';
 
 class PokemonesGaleria extends React.Component {
   constructor(props) {
