@@ -10,7 +10,9 @@ function App() {
     <Provider store={store}>
       <Grid container spacing={3}>
         <Grid item xs={8}>
-          <Pokemones />
+          <div className="scroller">
+            <Pokemones />
+          </div>
         </Grid>
         <Grid item xs={4}>
           <br></br>

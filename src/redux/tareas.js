@@ -14,8 +14,11 @@ export const iniciarPokemon = (dispatch) => {
     return fetch(data.url)
       .then((resp) => resp.json())
       .then((data) => {
+console.log('data: ', data);
         const datos = 
           {
+            hp: data.base_experience,
+            id: data.id,
             nombre: data.name,
             imagen: data.sprites.other["official-artwork"].front_default,
             peso: data.weight,
