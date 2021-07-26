@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import PokemonesDetalles from "./componentes/detalles";
+import Pokemones from "./componentes/pokemones";
+import Grid from "@material-ui/core/Grid";
+import { Provider } from "react-redux";
+import store from "./redux/store";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Grid container spacing={3}>
+      <Grid item xs={8}>
+        
+        <Pokemones />
+        </Grid>
+        <Grid item xs={4}>
+        <PokemonesDetalles />
+        </Grid>
+      </Grid>
+    </Provider>
   );
 }
 
