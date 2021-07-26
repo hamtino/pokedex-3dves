@@ -1,5 +1,4 @@
-import PokemonesDetalles from "./componentes/detalles";
-import Pokemones from "./componentes/pokemones";
+import Pokemones from "./componentes/Pokemones";
 import Grid from "@material-ui/core/Grid";
 import { Provider } from "react-redux";
 import store from "./redux/store";
@@ -13,9 +12,7 @@ function App() {
         
         <Pokemones />
         </Grid>
-        <Grid item xs={4}>
-        <PokemonesDetalles />
-        </Grid>
+
       </Grid>
     </Provider>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import PokemonesGaleria from "./PokemonesGaleria";
 
 class Pokemones extends React.Component {
     constructor(props) {
@@ -6,7 +7,7 @@ class Pokemones extends React.Component {
         this.state = {  }
     }
     render() { 
-        return ( <p>texto</p> );
+        return ( <PokemonesGaleria /> );
     }
 }
  
