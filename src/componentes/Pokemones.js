@@ -1,6 +1,7 @@
 import React from 'react';
 import PokemonesGaleria from "./PokemonesGaleria";
 import PokemonesTabla from "./PokemonesTabla";
+import PokemonesLista from "./PokemonesLista";
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -84,7 +85,7 @@ export default function Pokemones() {
       <PokemonesTabla/>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Page Three
+      <PokemonesLista/>
       </TabPanel>
     </div>
   );
