@@ -6,19 +6,16 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import Paper from '@material-ui/core/Paper';
 import { cargarDetalles } from "../redux/tareas";
 
 class Tarjeta extends React.Component {
   render() {
-    
     const { name, url } = this.props.pokemon;
     const id = url.split("/")[6];
     const imgUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
     return (
       <Grid item xs={3}>
-        <Paper elevation={3}>
-        <Card className={name} variant="scrollable">
+        <Card>
           <CardActionArea onClick={event => { this.props.añadirDetalle(this.props.pokemon)}}>
             <div
               style={{
@@ -55,7 +52,6 @@ class Tarjeta extends React.Component {
             </CardContent>
           </CardActionArea>
         </Card>
-        </Paper>
       </Grid>
     );
   }
