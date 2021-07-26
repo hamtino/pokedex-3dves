@@ -98,7 +98,7 @@ class PokemonesDetalles extends React.Component {
               >
                 <Typography >
                 {this.props.detalles.experiencia.map((exp, index) => (
-                                <Chip label={exp.stat.name + " : " + exp.base_stat} clickable color="primary" />
+                                <Chip label={exp.stat.name + " : " + exp.base_stat} key={index} clickable color="primary" />
 
             ))}
                 </Typography>
